@@ -1,0 +1,26 @@
+body {
+    background-color: #555555;
+    text-align: center;
+}
+#peli {
+    display: inline-block;
+    text-align: left;
+    padding: 2px;
+    border: 3px black solid;
+    border-radius: 15px;
+    background-color:#DDDDDD;
+    padding:5px;
+}
+#piirtoalusta {
+    display:block;
+    margin:auto;
+}
+h1 {
+    font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 5px;
+    text-decoration: none;
+}
+input {
+    max-width: 40px;
+}

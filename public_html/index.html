@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 
+Peli ei välitä css-tiedoston määrityksestä. Piirtoalustan koko tosin määritellään uudestaan joka kerta kun peli aloitetaan alusta ja se muuttuu leveyden ja korkeuden mukaan. Tähän on syytä varautua
+
+Html-tiedostossa on pakko olla piirtoalusta-ID:llä varustettu canvas-elementti ja tk_lev + tk_kor + tk_mii ID:illä varustetut tekstikentät. Ilman näitä peli ei käynnisty. 
+
+Lisäksi olisi hyvä olla nappi tai joku muu ratkaisu, jonka avulla pelaaja voi suorittaa aloitaPeliAlusta()-funktion halutessaan.
+
+Lisäksi pelin js-tiedoston kansiossa täytyy olla miina.png ja lippu.png -kuvatiedostot. Niiden koko on vapaa, mutta mielellään 40x40 pikseliä jotta ne olisi samankokoiset kun ruudut. Kuva piirretään ruudun yläreunasta lähtien.
+-->
+<html>
+    <head>
+        <title>Miinaharava</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="tyyli.css" charset="UTF-8" />
+    </head>
+    <body>
+        <div id="peli">
+            <h1>Miinaharava</h1>
+            <canvas id="piirtoalusta" width="400" height="400"></canvas>
+            <br />
+            <fieldset>
+                Leveys: <input name="leveys" type="number" min="1" id="tk_lev" />
+                Korkeus: <input name="korkeus" type="number" min ="1" id="tk_kor" />
+                Miinoja: <input name="miinoja" type="number" min ="1" id="tk_mii" />
+                <button onclick="aloitaPeliAlusta()" style="float:right;">Aloita alusta</button>
+            </fieldset>
+        </div>
+    <script type="text/javascript" src="peli.js" charset="UTF-8"></script>
+    </body>
+</html>
